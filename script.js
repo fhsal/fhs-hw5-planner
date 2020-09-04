@@ -109,9 +109,10 @@ function getSavedSchedule() {
 
 // retreive schedule from local storage and update the calendar on reload 
 
+colorCalendar();
 getSavedSchedule();
 refreshCalendar();
-colorCalendar();
+
 
 
 
