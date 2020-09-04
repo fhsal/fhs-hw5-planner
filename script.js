@@ -7,6 +7,7 @@
   var currentHour = moment().format('H');
 
   console.log(fullDay);
+  // alert("hello");
 
 // updates current day in header 
 
@@ -42,13 +43,24 @@ var calArray = [
 function colorCalendar(){
   for (var i = 0 ; i < calArray.length; i++ ) {
       var hour = "cal-" + calArray[i].hour;
+      var adjHour = i+9;
       console.log(hour);
-      if ((i+9)< (currentHour)){
+      console.log("current hour = " + currentHour);
+      console.log("index = " + adjHour);
+      if (adjHour<currentHour){
           document.getElementById(hour).setAttribute ("style" ,
           "background-color:grey");
       }
+
+      else if (adjHour==currentHour){
+        document.getElementById(hour).setAttribute ("style" ,
+        "background-color: steelblue");
+        console.log("else");
+        console.log(currentHour);
+        console.log(adjHour);
   }
   }
+}
 
 
 // function to refresh the calendar from calArray
@@ -99,6 +111,7 @@ function getSavedSchedule() {
 
 getSavedSchedule();
 refreshCalendar();
+colorCalendar();
 
 
 
