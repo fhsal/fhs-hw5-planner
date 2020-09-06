@@ -7,7 +7,7 @@
   var currentHour = moment().format('H');
 
   console.log(fullDay);
-  // alert("hello");
+  // alert("hello - Friday");
 
 // updates current day in header 
 
@@ -109,10 +109,9 @@ function getSavedSchedule() {
 
 // retreive schedule from local storage and update the calendar on reload 
 
-colorCalendar();
 getSavedSchedule();
 refreshCalendar();
-
+colorCalendar();
 
 
 
