@@ -37,6 +37,13 @@ var calArray = [
     event: "free"},
 ]
 
+// initialize the schedule in local storage if it does not exist 
+
+if (localStorage.length===0){
+  saveSchedule();
+}
+
+
 
 // function to color the calendar rows based upon time-of-day
 
@@ -109,9 +116,12 @@ function getSavedSchedule() {
 
 // retreive schedule from local storage and update the calendar on reload 
 
+
+
+colorCalendar();
 getSavedSchedule();
 refreshCalendar();
-colorCalendar();
+
 
 
 
